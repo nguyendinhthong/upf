@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('up.upload');
 });
 
 Route::get('/up', function () {
@@ -27,4 +27,6 @@ Route::post('/upfile', 'UpController@pushFile');
 Route::get('upload', function() {
   return View::make('up.upload');
 });
-Route::post('apply/upload', 'ApplyController@upload');
+Route::post('upload', 'ApplyController@upload');
+
+Route::get('/upload/{id}','ApplyController@getlink');

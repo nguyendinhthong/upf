@@ -17,7 +17,7 @@
                   @endif                  
 
                   <div class="form-group"></div>
-                  {!! Form::open(array('url'=>'apply/upload','method'=>'POST', 'files'=>true)) !!}
+                  {!! Form::open(array('url'=>'upload','method'=>'POST', 'files'=>true)) !!}
                  
                           {!! Form::file('image') !!}
                           <p class="errors">{!!$errors->first('image')!!}</p>
